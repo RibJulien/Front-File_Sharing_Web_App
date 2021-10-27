@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application web de partage de fichiers</title>
+    <meta name="description" content="Example du front d'une page d'accueil pour un site de partage de fichiers.">
+    <meta name="author" content="Julien Ribeaucourt">
+    <link rel="icon" href="img/favicon.ico">
+    <!-- Bootstrap -->
+    <link href="bootstrap-grid.min.css" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row">
+        <section class="col-1 left">
+                <p class="left__title">MesDocs</p>
+                <i class="fas fa-th-large active"></i>
+                <i class="far fa-folder"></i>
+                <i class="far fa-hdd"></i>
+                <i class="fas fa-cogs"></i>
+            <div class="left__icon_last">
+                <i class="fas fa-sign-out-alt"></i>   
+            </div>         
+        </section>
+        <section class="col-9 middle">
+            <div class="middle__div__input d-flex justify-content-between">
+                <input type="text" placeholder="e.g files.doc" class="middle__input">
+                <span class="fas fa-search middle__input__icon"></span>
+            </div>
+            <div id="middle__quick__access">
+                <p class="middle__quick__access__title">Accès rapide</p>
+                <div class="middle__quick__access__icon__div">
+                    <div class="middle__quick__access__icon__background">
+                        <div class="middle__quick__access_icon__background__purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <circle cx="8.5" cy="8.5" r="1.5"/>
+                                <polyline points="21 15 16 10 5 21"/>
+                            </svg>
+                        </div>
+                        <span class="middle__quick__access__icon__description">Image</span>
+                    </div>
+                    <div class="middle__quick__access__icon__background">
+                        <div class="middle__quick__access_icon__background__purple">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-music">
+                                <path d="M9 18V5l12-2v13"/>
+                                <circle cx="6" cy="18" r="3"/>                   <circle cx="18" cy="16" r="3"/>
+                            </svg>
+                        </div>
+                        <span class="middle__quick__access__icon__description">Musique</span>
+                    </div>
+                    <div class="middle__quick__access__icon__background">
+                        <div class="middle__quick__access_icon__background__blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                        </div>
+                        <span class="middle__quick__access__icon__description">Video</span>
+                    </div>
+                    <div class="middle__quick__access__icon__background">
+                        <div class="middle__quick__access_icon__background__blue">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-align-left">
+                                <line x1="17" y1="10" x2="3" y2="10"/>
+                                <line x1="21" y1="6" x2="3" y2="6"/>
+                                <line x1="21" y1="14" x2="3" y2="14"/>
+                                <line x1="17" y1="18" x2="3" y2="18"/>
+                            </svg>
+                        </div>
+                        <span class="middle__quick__access__icon__description">Docs</span>
+                    </div>
+                    <div class="middle__quick__access__icon__background">
+                        <div class="middle__quick__access_icon__background__dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                                <polyline points="2 17 12 22 22 17"/>
+                                <polyline points="2 12 12 17 22 12"/>
+                            </svg>
+                        </div>
+                        <span class="middle__quick__access__icon__description">Apps</span>
+                    </div>
+                    <div class="middle__quick__access__icon__background">
+                        <div class="middle__quick__access_icon__background__dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="8 12 12 16 16 12"/>
+                                <line x1="12" y1="8" x2="12" y2="16"/>
+                            </svg>
+                        </div>
+                        <span class="middle__quick__access__icon__description">Download</span>
+                    </div>
+                </div>
+            </div>
+            <div id="middle__preview">
+                <p class="middle__preview__title">Aperçu</p>
+                <div class="middle__preview__video">
+                    <div class="middle__preview__video__first">
+                        <div class="overlay">
+                            <div class="overlay__info">
+                                <div class="overlay__info__text">
+                                    <p class="overlay__info__title">Happiness & Tears</p>
+                                    <p class="overlay__info__size">12.7 MB</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="middle__preview__video__timer">14:35</span>
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2251&amp;q=80">
+                    </div>
+                    <div class="middle__preview__video__second">
+                        <div class="overlay">
+                            <div class="overlay__info">
+                                <div class="overlay__info__text">
+                                    <p class="overlay__info__title">High Hopes</p>
+                                    <p class="overlay__info__size">19.8 MB</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="middle__preview__video__timer">22:49</span>
+                        <img src="https://images.unsplash.com/photo-1515552726023-7125c8d07fb3?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2167&amp;q=80">
+                    </div>
+                    <div class="middle__preview__video__third">
+                        <div class="overlay">
+                            <div class="overlay__info">
+                                <div class="overlay__info__text">
+                                    <p class="overlay__info__title">Imaginery you</p>
+                                    <p class="overlay__info__size">47.1 MB</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="middle__preview__video__timer">08:21</span>
+                        <img src="https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2167&amp;q=80">
+                    </div>
+                </div>
+            </div>
+            <div id="middle__recent__files">
+                <div class="middle__recent__files__header">
+                    <p class="middle__recent__files__title">Fichiers récents</p>
+                    <p class="middle__recent__files__views">Voir tous les fichiers</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Taille</th>
+                            <th>Dernière modification</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-name">Brandenburg.pdf</td>
+                            <td class="td-size">42 MB</td>
+                            <td class="td-update">26 Août 2021</td>
+                            <td class="middle__recent__files__table__action td-action">...</td>
+                        </tr>
+                        <tr>
+                            <td>TheLionsRoar.jpg</td>
+                            <td>500 KB</td>
+                            <td>12 Juin 2021</td>
+                            <td class="middle__recent__files__table__action">...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="col-2 right">
+            <div class="right__download">
+                <div class="right__download__header">
+                    <p class="right__download__header__title">Téléchargements</p>
+                    <p class="right__download__header_dots">...</p>
+                </div>
+                <div class="right__download__today">
+                    <p class="right__download__today__title">Aujourd'hui</p>
+                    <div class="right__download__area">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="right__download__icon">
+                            <defs></defs>
+                            <circle cx="256" cy="256" r="256" fill="#4b50dd"></circle>
+                            <path fill="#f5f5f5" d="M192 64h176c4.4 0 8 3.6 8 8v328c0 4.4-3.6 8-8 8H120c-4.4 0-8-3.6-8-8V148l80-84z"></path>
+                            <path fill="#e6e6e6" d="M184 148c4.4 0 8-3.6 8-8V64l-80 84h72z"></path>
+                            <circle cx="352" cy="384" r="52" fill="#2179a6"></circle>
+                            <g fill="#f5f5f5" class="g">
+                              <path d="M352 416c-2.208 0-4-1.788-4-4v-56c0-2.212 1.792-4 4-4s4 1.788 4 4v56c0 2.212-1.792 4-4 4z"></path>
+                              <path d="M352 416a3.989 3.989 0 01-2.828-1.172l-20-20c-1.564-1.564-1.564-4.092 0-5.656s4.092-1.564 5.656 0L352 406.344l17.172-17.172c1.564-1.564 4.092-1.564 5.656 0s1.564 4.092 0 5.656l-20 20A3.989 3.989 0 01352 416z"></path>
+                            </g>
+                        </svg>
+                        <div class="right__download__text">
+                            <p class="right__download__text__title">Italie.mp4</p>
+                            <p class="right__download__text__desc">34.45 MB. En attente ...</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" class="right__download__icon__download">
+                            <defs></defs>
+                            <path d="M403.939 295.749l-78.814 78.833V172.125c0-10.557-8.568-19.125-19.125-19.125s-19.125 8.568-19.125 19.125v202.457l-78.814-78.814c-7.478-7.478-19.584-7.478-27.043 0-7.478 7.478-7.478 19.584 0 27.042L289.208 431c4.59 4.59 10.863 6.005 16.812 4.953 5.929 1.052 12.221-.382 16.811-4.953l108.19-108.19c7.478-7.478 7.478-19.583 0-27.042-7.498-7.478-19.604-7.478-27.082-.019zM306 0C137.012 0 0 136.992 0 306s137.012 306 306 306 306-137.012 306-306S475.008 0 306 0zm0 573.75C158.125 573.75 38.25 453.875 38.25 306S158.125 38.25 306 38.25 573.75 158.125 573.75 306 453.875 573.75 306 573.75z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="right__download__yesterday">
+                    <p class="right__download__yesterday__title">Hier</p>
+                    <div class="right__download__area">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="right__download__icon">
+                            <defs></defs>
+                            <circle cx="256" cy="256" r="256" fill="#4bc0dd"></circle>
+                            <path fill="#f5f5f5" d="M192 64h176c4.4 0 8 3.6 8 8v328c0 4.4-3.6 8-8 8H120c-4.4 0-8-3.6-8-8V148l80-84z"></path>
+                            <path fill="#e6e6e6" d="M184 148c4.4 0 8-3.6 8-8V64l-80 84h72z"></path>
+                            <circle cx="352" cy="384" r="52" fill="#2179a6"></circle>
+                            <g fill="#f5f5f5" class="g">
+                              <path d="M352 416c-2.208 0-4-1.788-4-4v-56c0-2.212 1.792-4 4-4s4 1.788 4 4v56c0 2.212-1.792 4-4 4z"></path>
+                              <path d="M352 416a3.989 3.989 0 01-2.828-1.172l-20-20c-1.564-1.564-1.564-4.092 0-5.656s4.092-1.564 5.656 0L352 406.344l17.172-17.172c1.564-1.564 4.092-1.564 5.656 0s1.564 4.092 0 5.656l-20 20A3.989 3.989 0 01352 416z"></path>
+                            </g>
+                          </svg>
+                        <div class="right__download__text">
+                            <p class="right__download__text__title">Disneyland.mp4</p>
+                            <div class="right__download__progress__bar">
+                                <span class="right__download__progress"></span>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="1 1 512 512" class="right__download__icon__download">
+                            <defs></defs>
+                            <path d="M256 512C114.613 512 0 397.383 0 256S114.613 0 256 0s256 114.613 256 256c-.168 141.316-114.684 255.832-256 256zm0-480C132.29 32 32 132.29 32 256s100.29 224 224 224 224-100.29 224-224c-.133-123.656-100.344-223.867-224-224zm0 0"></path>
+                            <path d="M208 368c-8.836 0-16-7.164-16-16V160c0-8.836 7.164-16 16-16s16 7.164 16 16v192c0 8.836-7.164 16-16 16zm0 0M304 368c-8.836 0-16-7.164-16-16V160c0-8.836 7.164-16 16-16s16 7.164 16 16v192c0 8.836-7.164 16-16 16zm0 0"></path>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="right__file__received">
+                <p class="right__file__received__title">Fichiers reçus</p>
+                <div class="right__file__received__content">
+                    <div class="right__file__received__progress__line">
+                        <span class="right__file__received__progress__line__start">10:30</span>
+                        <span class="right__file__received__progress__line__end">14:30</span>
+                    </div>
+                    <div class="right__file__received__right__side">
+                        <div class="right__file__received__image">
+                            <div class="right__file__received__image__1">
+                                <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80">
+                            </div>
+                            <div class="right__file__received__image__2">
+                                <img src="https://images.unsplash.com/photo-1498855926480-d98e83099315?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80">
+                            </div>
+                            <div class="right__file__received__image__1">
+                                <img src="https://images.unsplash.com/photo-1492648272180-61e45a8d98a7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80">
+                            </div>
+                        </div>
+                        <p class="right__file__received__desc">3 images reçus total de 50.3 MB</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <span class="fas fa-bars button-sidebar-left"></span>
+    <span class="fas fa-chevron-left button-sidebar-left-close"></span>
+    
+    <span class="fas fa-chevron-left button-sidebar-right"></span>
+    <span class="far fa-times-circle button-sidebar-right-close"></span>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
