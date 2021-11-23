@@ -8,7 +8,7 @@
 
 ## Informations
 
-Réalisation d'un template front, inspiré de choses vues sur [dev.to](https://dev.to/ "Dev.to)
+Réalisation d'un template front, inspiré de choses vues sur <a href="https://dev.to">dev.to</a>
 
 Aucune librairie ni framework utilisé, du simple HTML5/CSS3/Javascript !
 
