@@ -31,6 +31,7 @@ window.onload = function() {
         sleep(400).then(() => {
             document.querySelector(".middle").style.visibility = "collapse";
             document.querySelector(".button-sidebar-right-close").classList.add("button-sidebar-right-close-active");
+            document.querySelector(".button-sidebar-right-close").style.display = "block";
         });
     })
 
@@ -38,8 +39,9 @@ window.onload = function() {
     document.querySelector(".button-sidebar-right-close").addEventListener("click", function() {
         document.querySelector(".right").classList.remove("right-active");
         document.querySelector(".middle").style.visibility = "visible";
-        sleep(400).then(() => {
+        sleep(200).then(() => {
             document.querySelector(".button-sidebar-right-close").classList.remove("button-sidebar-right-close-active");
+            document.querySelector(".button-sidebar-right-close").style.display = "none";
         });
     })
 

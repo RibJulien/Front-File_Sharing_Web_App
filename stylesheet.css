@@ -264,12 +264,6 @@ td {
     overflow: auto;
 }
 
-.button-sidebar-right-close {
-    visibility: collapse;
-
-}
-
-
 /****************************************************** Download  *********************************************/
 
 .right__download, .right__file__received {
@@ -416,6 +410,10 @@ td {
     font-size: .9rem;
     text-align: center;
     margin-left: 26px;
+}
+
+.button-sidebar-left, .button-sidebar-left-close, .button-sidebar-right, .button-sidebar-right-close {
+    display: none;
 }
 
 /* Font-face */
@@ -583,6 +581,10 @@ td {
     .middle__quick__access__title, .middle__preview__title, .middle__recent__files__title {
         font-size: 1.6rem;
     }
+
+    .button-sidebar-left, .button-sidebar-left-close, .button-sidebar-right  {
+        display: block;
+    }
     
 
     /* Dynamic left sidebar */
@@ -606,6 +608,7 @@ td {
         padding: 1rem;
         color: #666;
         visibility: collapse;
+        z-index: 5;
     }
 
     .left {
@@ -638,11 +641,9 @@ td {
         transform: translateX(100%);
         position: absolute;
         opacity: 0;
-        z-index: 5;
+        z-index: 6;
         box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
         transition: all .4s ease-in;
-        overflow: hidden;
-        height: 880px;
     }
 
     .right-active {
@@ -664,17 +665,21 @@ td {
         padding: 0 2rem;
     }
 
+    .right__file__received__progress__line {
+        height: 700px;
+    }
+
     .button-sidebar-right-close-active {
-        visibility: visible;
         cursor: pointer;
         font-size: 1.2rem;
         position: absolute;
         top: 1rem;
         right: 1rem;
         color: #666;
-        z-index: 5;
+        z-index: 7;
     }
 
-
-
+    .button-sidebar-left, .button-sidebar-left-close, .button-sidebar-right {
+        display: block;
+    }
 }
